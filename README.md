@@ -1,4 +1,5 @@
 # Blitzlanepy MCP Server for Blitzlane Desktop
+![image](https://github.com/user-attachments/assets/76d3e042-b2de-4c1c-af2f-2cf6982a52f7)
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
