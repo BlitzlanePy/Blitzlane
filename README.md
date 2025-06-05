@@ -1,15 +1,15 @@
-# Blitzlanepy MCP Server for Blitzlane Desktop
+# Blitzlane MCP Server for Claude Desktop
 ![image](https://github.com/user-attachments/assets/cfbb5cfc-2f61-4691-af50-338ba7ac1080)
 
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A Model Context Protocol (MCP) server that provides onchain tools for Blitzlane, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Fastlanepy and enables AI agents to perform blockchain operations seamlessly.
+A Model Context Protocol (MCP) server that provides onchain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Fastlanepy and enables AI agents to perform blockchain operations seamlessly.
 
 ## Overview
 
-This MCP server extends Blitzlane's capabilities by providing tools to:
+This MCP server extends Claude's capabilities by providing tools to:
 
 - Interact with Solana blockchain
 - Execute transactions
