@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "subgrounds"
+version = "1.9.1"
+description = "A Pythonic data access layer for applications querying data from The Graph Network."
+authors = [
+    "cvauclair <cvauclair@playgrounds.network>",
+    "0xMochan <mochan@playgrounds.network>",
+]
+repository = "https://github.com/0xPlaygrounds/subgrounds"
+
+readme = "README.md"
+keywords = ["graph", "subgrounds", "graphql", "subgraph"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = ">=1.4.2, ^2.1"
+pipe = "^2.0"
+pydantic = "^2.0"
+dash = { version = "^2.3.1", optional = true }
+plotly = { version = "^5.14.1", optional = true }
+httpx = { extras = ["http2"], version = "^0.25.1" }
+pytest-asyncio = "*"
+
+[tool.poetry.extras]
+dash = ["dash"]
+plotly = ["plotly"]
+all = ["dash", "plotly"]
+
+# https://python-poetry.org/docs/managing-dependencies/#dependency-groups
+[tool.poetry.group.dev.dependencies]
+black = "^22.3.0"
+deepdiff = "^6.2.1"                  # used for debugging data structures
+ipykernel = "^6.13.0"
+mypy = "^0.950"
+pytest = "^7.1.2"
+pytest-mock = "^3.8.2"
+python-semantic-release = "^7.33.1"
+ruff = "^0.0.253"
+
+[tool.poe.tasks]
+format = "black subgrounds examples tests"
+
+_black = "black subgrounds examples tests --check"
+_ruff = "ruff check subgrounds examples tests"
+check.sequence = ["_black", "_ruff"]
+check.ignore_fail = "return_zero"
+
+test = "pytest"
+
+[tool.semantic_release]
+branch = "main"
+upload_to_pypi = true
+version_variable = ["subgrounds/__init__.py:__version__"]
+version_toml = "pyproject.toml:tool.poetry.version"
+major_on_zero = false
+build_command = "poetry build"
+
+[tool.ruff]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["E501"]
+"subgrounds/plotly_wrappers" = ["F405", "F403"]
+"subgrounds/dash_wrappers" = ["F405", "F403"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
