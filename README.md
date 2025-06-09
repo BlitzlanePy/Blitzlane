@@ -1,215 +1,583 @@
-# Blitzlane MCP Server for Claude Desktop
+# Blitzlane: Your AI Agent Toolkit for Blockchain Applications
 ![image](https://github.com/user-attachments/assets/cfbb5cfc-2f61-4691-af50-338ba7ac1080)
 
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A Model Context Protocol (MCP) server that provides onchain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Fastlanepy and enables AI agents to perform blockchain operations seamlessly.
+	
 
-## Overview
+Blitzlane is a Python toolkit designed to empower AI agents to interact seamlessly with blockchain applications, focusing on Solana and Base. It simplifies the development of decentralized applications (dApps) by providing tools for token management, NFT handling, and more. With a focus on ease of use and powerful functionality, Blitzlane allows developers to create robust and sophisticated blockchain-based solutions, leveraging AI-driven workflows.
 
-This MCP server extends Claude's capabilities by providing tools to:
+GitHub Stars GitHub Forks Total Downloads PyPI Version Open Issues Python Version License
 
-- Interact with Solana blockchain
-- Execute transactions
-- Query account information
-- Manage Solana wallets
-- Get price predictions
-- Trade and stake tokens
-- Deploy new tokens
-- Get token information from CoinGecko
-- Execute cross-chain bridge transactions using deBridge
-- Get real-time price data from Pyth Network
-- Access comprehensive token information from CoinGecko
-- Monitor trending tokens and pools
-- Track top gainers and market movements
-- Get detailed token price data and analytics
+🚀 Introduction
+Blitzlane bridges the gap between AI agents and blockchain applications. It provides a streamlined development experience for building decentralized applications (dApps) that leverage the power of AI on Solana and Base. From automated trading to complex DeFi interactions, Blitzlane equips developers with the tools needed to build intelligent on-chain solutions.
 
-The server implements the Model Context Protocol specification to standardize blockchain interactions for AI agents.
+✨ Key Features
+Broad Protocol Support: Supports a wide range of protocols on Solana and Base (See Detailed Protocol Table Below).
+Asynchronous Operations: Utilizes asynchronous programming for efficient blockchain interactions.
+Easy Integration: Designed for seamless integration into existing AI agent frameworks and dApp projects.
+Comprehensive Toolset: Provides tools for token trading, NFT management, DeFi interactions, and more.
+Extensible Design: Allows developers to create custom protocols and actions.
+Coingecko Integration: Enhanced with new tooling to explore trending tokens, prices, and new pools
+Streamlined Development: Provides essential utility functions such as price fetching, balance checks, and transaction confirmation.
+Model Context Protocol (MCP) Support: Includes a built-in MCP server module and supports integration with dedicated MCP servers (like the Blitzlane-mcp for Claude Desktop) for standardized AI interaction.
+📦 Installation and Setup
+Before you begin, ensure you have the following prerequisites:
 
-## Prerequisites
+Python 3.8+: Required for running the toolkit.
+Solana CLI: For Solana-specific actions (e.g., wallet creation).
+Langchain: For AI integration (pip install langchain).
+Wallet with Private Keys: Crucial for signing and sending transactions. Securely manage your private keys!
+API Keys (Optional): For accessing various blockchain networks or external data sources (e.g., CoinGecko, Allora, e.t.c.).
+Follow these steps to install and set up Blitzlane:
 
-- Python 3.8 or higher
-- Claude Desktop installed
-- Solana wallet with private key
-- Solana RPC URL (mainnet, testnet, or devnet)
-- OpenAI API Key (optional)
-- Allora API Key (optional)
-- CoinGecko Pro API Key (optional)
+Create a Virtual Environment (Recommended): Isolate your project dependencies.
+python -m venv venv
+Activate the Virtual Environment:
+Linux/macOS:
+source venv/bin/activate
+Windows:
+venv\Scripts\activate
+Install Blitzlane:
+pip install Blitzlane
+Verify Installation:
+import Blitzlane
+print(Blitzlane.__version__)  # Example output: 2.0.2
+🛠️ Supported Protocols and Tools
+Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
 
-## Installation
+🛠️ Supported Protocols and Tools
+Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
 
-### Option 1: Quick Install (Recommended)
+Protocol	Blockchain	Actions	GitHub Tool Link
+Jupiter	Solana	Token swaps, direct routing, stake SOL	Jupiter Swap Tool
+PumpFun	Solana	Buy/sell tokens, launch tokens, retrieve/calculate pump curve states	PumpFun Buy Tool
+Raydium	Solana	Buy/sell tokens, provide liquidity	Raydium Trade Tool
+Metaplex	Solana	NFT minting, collection deployment, metadata/royalty management	Metaplex Mint Tool
+DexScreener	Solana	Get token data by ticker/address	DexScreener Data Tool
+Helius	Solana	Fetch balances, NFT mint lists, events, webhooks	Helius Balance Tool
+MoonShot	Solana	Buy/sell with collateral, slippage options	MoonShot Trade Tool
+SNS	Solana	Get token data by ticker/address	SNS Data Tool
+Cybers	Solana	Authenticate wallet, create coin	Cybers Auth Tool
+Adrena	Solana	Open/close perpetual trades (long/short)	Adrena Trade Tool
+Drift	Solana	Manage user accounts, deposit/withdraw, perp trades, account info	Drift Account Tool
+Flash	Solana	Open/close trades	Flash Trade Tool
+Jito	Solana	Manage tip accounts, bundle transactions	Jito Tip Tool
+Lulo	Solana	Lend assets to earn interest, Withdraw tokens	Lulo Lend Tool
+RugCheck	Solana	Fetch detailed/summary token reports	RugCheck Report Tool
+All Domains	Solana	Resolve domains, get owned domains	All Domains Resolve Tool
+Orca	Solana	Manage liquidity pools, positions	Orca Position Tool
+Backpack	Solana	Manage account balances, settings, borrowing	Backpack Balance Tool
+OpenBook	Solana	Create markets	OpenBook Market Tool
+Light Protocol	Solana	Send compressed airdrops	Light Airdrop Tool
+Pyth Network	Solana	Fetch token prices	Pyth Price Fetch Tool
+Manifest	Solana	Create markets, place/cancel orders	Manifest Order Tool
+Stork	Solana	Get real-time token price feed	Stork Price Feed Tool
+Gibwork	Solana	Create tasks with token rewards	Gibwork Task Tool
+Meteora	Solana	Create DLMM pools with configurations	Meteora Pool Tool
+StakeWithJup	Solana	Stakes JUP to earn JUP tokens	Stake With Jup tool
+ThreeLand	Solana	ThreeLand NFT mint and deploy	ThreeLand NFT mint tool
+ThreeLand	Solana	ThreeLand NFT mint and deploy	ThreeLand NFT mint tool
+Elfa AI	Solana	Get trending tokens, mentions, smart account stats	Elfa AI Tool
+FluxBeam	Solana	Create a new pool	FluxBeam Tool
+Blitzlane MCP	Solana	Extensible Solana toolset via a Model Context Protocol server	MCP tool
+Claude Desktop MCP	Solana	Claude‐compatible MCP server exposing onchain actions	Blitzlane MCP Server for Claude Desktop
+🚀 Quick Start Example
+Important Security Note: Never hardcode your private key directly into your code. Use environment variables or secure key management systems in a production environment.
 
-```bash
-# Clone the repository
-git clone https://github.com/fastlanepython/Fastlanepy-mcp
-cd Fastlanepy-mcp
+Transfer SOL/SPL: Easily send tokens.
+from Blitzlane.agent import SolanaAgentKit
+from Blitzlane.tools.transfer import TokenTransferManager
+import asyncio
 
-# Create and activate virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+async def main():
+    """
+    Quick Start Example: Transfer SOL on Mainnet.
+    """
+    # **!!! IMPORTANT SECURITY WARNING !!!**
+    # NEVER hardcode your private key directly into your code, ESPECIALLY for Mainnet.
+    # This is for demonstration purposes ONLY.
+    # In a real application, use environment variables, secure key vaults, or other
+    # secure key management practices.  Compromising your private key can lead to
+    # loss of funds.
 
-# Install dependencies
-pip install -r requirements.txt
-```
+    PRIVATE_KEY = ""  # ⚠️ REPLACE THIS SECURELY! ⚠️
+    RECIPIENT_WALLET_ADDRESS = "" # 👤 REPLACE THIS WITH RECIPIENT ADDRESS 👤
 
-### Option 2: Manual Setup
+    agent = SolanaAgentKit(
+        private_key=PRIVATE_KEY,
+        rpc_url="https://api.mainnet-beta.solana.com"  # Mainnet RPC endpoint
+    )
 
-1. Create a virtual environment:
+    TRANSFER_AMOUNT_SOL = 0.0001 # A very small amount of SOL for testing.  Adjust as needed.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
-```
+    try:
+        transfer_signature = await TokenTransferManager.transfer(
+            agent=agent,
+            to=RECIPIENT_WALLET_ADDRESS,
+            amount=TRANSFER_AMOUNT_SOL
+        )
+        print(f"Transfer successful!")
+        print(f"Transaction Signature: https://explorer.solana.com/tx/{transfer_signature}")
 
-2. Install required packages:
+    except RuntimeError as e:
+        print(f"Error: Transfer failed: {e}")
 
-```bash
-pip install Fastlanepy>=2.0.8 cryptography>=3.4.7 python-dotenv>=0.17.1 web3>=7.8.0 allora_sdk>=0.2.0 mcp>=1.4.0
-```
+if __name__ == "__main__":
+    asyncio.run(main())
+Checking Sol Balance Using Agentipy
+from agentipy.agent import SolanaAgentKit
+from agentipy.tools.get_balance import BalanceFetcher
+import asyncio
 
-## Configuration
+async def main():
+    """
+    Quick Start Example: Get SOL Balance on Mainnet.
+    """
+    # **Important Security Note:**
+    # NEVER hardcode your private key directly into your code.
+    # Use environment variables or secure key management systems in production.
+    PRIVATE_KEY = "YOUR_PRIVATE_KEY_HERE"  # Replace with your actual private key (securely!)
+    WALLET_ADDRESS = "YOUR_WALLET_ADDRESS_HERE" # Replace with your actual wallet address
 
-### Environment Setup
+    agent = SolanaAgentKit(
+        private_key=PRIVATE_KEY,
+        rpc_url="https://api.mainnet-beta.solana.com"  # Mainnet RPC endpoint
+    )
 
-Create a `.env` file with your credentials:
+    try:
+        balance_sol = await BalanceFetcher.get_balance(agent)
+        print(f"Wallet Balance for {WALLET_ADDRESS}: {balance_sol:.4f} SOL")
+        print("Successfully retrieved SOL balance!")
 
-```env
-# Solana Configuration
-SOLANA_PRIVATE_KEY=your_private_key_here
-RPC_URL=your_solana_rpc_url_here
+    except Exception as e:
+        print(f"Error: Could not retrieve SOL balance: {e}")
 
-# Optional API Keys
-OPENAI_API_KEY=your_openai_api_key
-ALLORA_API_KEY=your_allora_api_key
-COINGECKO_PRO_API_KEY=your_coingecko_api_key
-```
+if __name__ == "__main__":
+    asyncio.run(main())
+CoinGecko Market Data Metrics & Trending Tokens
+from agentipy.agent import SolanaAgentKit
+from agentipy.tools.use_coingecko import CoingeckoManager
+from agentipy.tools.get_token_data import TokenDataManager
+from solders.pubkey import Pubkey
+import asyncio
 
-### Integration with Blitzlane Desktop
+async def main():
+    """
+    Quick Start Example:
+    1. Fetch Trending Tokens from CoinGecko.
+    2. Fetch and display data metrics for a user-specified token ticker.
+    """
 
-To add this MCP server to Blitzlane Desktop, follow these steps:
+    agent = SolanaAgentKit(
+        private_key="",  # Private key not needed for this example
+        rpc_url="https://api.mainnet-beta.solana.com"
+    )
 
-1. **Locate the Claude Desktop Configuration File**
+    # -------------------------------------------------------------
+    # Section 1: Fetch and Display Trending Tokens (No API key needed)
+    # -------------------------------------------------------------
+    try:
+        trending_tokens_data = await CoingeckoManager.get_trending_tokens(agent)
 
-   - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-   - Linux: `~/.config/Claude\claude_desktop_config.json`
+        if trending_tokens_data and 'coins' in trending_tokens_data:
+            print("Trending Tokens on CoinGecko:")
+            for token in trending_tokens_data['coins']:
+                print(f"- {token['item']['symbol']} ({token['item']['name']})")
+            print("\nSuccessfully fetched trending tokens!\n" + "-" * 40)
+        else:
+            print("No trending tokens data received.\n" + "-" * 40)
 
-2. **Add the Configuration**
-   Create or edit the configuration file and add the following JSON:
+    except Exception as e:
+        print(f"Error fetching trending tokens: {e}\n" + "-" * 40)
 
-   > **Note**: For the `command` field, use `run_mcp.sh` for Unix/Mac systems or `run_mcp.bat` for Windows systems. Make sure to use the correct absolute path to the script file on your system.
+    # -------------------------------------------------------------
+    # Section 2: Fetch and Display Data Metrics for User-Specified Ticker
+    # -------------------------------------------------------------
+    token_ticker = input("Enter a Token Ticker (e.g., SOL, USDC) to get its metrics: ").strip()
 
-   ```json
-   {
-     "mcpServers": {
-       "Fastlanepy": {
-         "command": "/path/to/your/run_mcp.sh",  # Replace with .bat for Windows
-         "env": {
-           "RPC_URL": "your_solana_rpc_url_here",
-           "SOLANA_PRIVATE_KEY": "your_private_key_here",
-           "OPENAI_API_KEY": "your_openai_api_key",
-           "ALLORA_API_KEY": "your_allora_api_key",
-           "COINGECKO_PRO_API_KEY": "your_coingecko_api_key"
-         },
-         "disabled": false,
-         "autoApprove": ["GET_BALANCE", "GET_PRICE_PREDICTION"]
-       }
-     }
-   }
-   ```
+    if token_ticker:
+        token_address = None
+        try:
+            resolved_address = TokenDataManager.get_token_address_from_ticker(token_ticker)
+            if resolved_address:
+                token_address = resolved_address
+                print(f"Resolved ticker '{token_ticker}' to Contract Address: {token_address}")
+            else:
+                raise ValueError(f"Could not resolve ticker '{token_ticker}' to a Contract Address.")
 
-3. **Restart Claude Desktop**
-   After making these changes, restart Claude Desktop for the configuration to take effect.
+            if token_address:
+                price_data = await CoingeckoManager.get_token_price_data(agent, [token_address])
 
-## Project Structure
+                if token_address in price_data and price_data[token_address]:
+                    token_info = price_data[token_address]
 
-```
-Fastlanepy-mcp/
-├── server.py          # Main entry point
-├── run_mcp.sh         # Run script for Unix/Mac
-├── run_mcp.bat        # Run script for Windows
-├── requirements.txt   # Dependencies
-└── .env              # Environment variables
-```
+                    print(f"\nData Metrics for {token_ticker.upper()} from CoinGecko:")
+                    print(f"- Current Price (USD): ${token_info['usd']:.4f}")
+                    print(f"- Market Cap (USD): ${token_info['usd_market_cap']:.2f}")
+                    print(f"- 24h Volume (USD): ${token_info['usd_24h_vol']:.2f}")
+                    print(f"- 24h Change (%): {token_info['usd_24h_change']:.2f}%")
+                    print(f"- Last Updated: {token_info['last_updated_at']}")
+                    print("\nSuccessfully fetched token data metrics!\n" + "-" * 40)
 
-## Available Tools
+                else:
+                    print(f"Could not retrieve price data for ticker: {token_ticker}.\n" + "-" * 40)
 
-The MCP server provides the following blockchain tools:
+            else:
+                print(f"Could not get token address for ticker: {token_ticker}.\n" + "-" * 40)
 
-### Native Solana Actions
 
-- `GET_BALANCE` - Check wallet balance
-- `TRANSFER` - Transfer tokens between wallets
-- `DEPLOY_TOKEN` - Deploy new tokens on Solana
+        except Exception as e:
+            print(f"Error fetching data metrics for ticker '{token_ticker}': {e}\n" + "-" * 40)
+    else:
+        print("No token ticker entered.\n" + "-" * 40)
 
-### Allora Actions
+if __name__ == "__main__":
+    asyncio.run(main())
+Jupiter Exchange SOL - USDC
+from agentipy.agent import SolanaAgentKit
+from agentipy.tools.trade import TradeManager
+from solders.pubkey import Pubkey
+import asyncio
 
-- `GET_PRICE_PREDICTION` - Get price predictions
-- `GET_ALL_TOPICS` - Get available topics
+async def main():
+    """
+    Quick Start Example: Swap SOL for USDC on Jupiter Exchange .
+    """
+    # **!!! IMPORTANT SECURITY WARNING !!!**
+    # NEVER hardcode your private key directly into your code, ESPECIALLY for Mainnet.
+    # This is for demonstration purposes ONLY.
+    # In a real application, use environment variables, secure key vaults, or other
+    # secure key management practices.
 
-### Jupiter Actions
+    PRIVATE_KEY = "YOUR_PRIVATE_KEY_HERE"  # ⚠️ REPLACE THIS SECURELY! ⚠️
 
-- `STAKE_WITH_JUP` - Stake tokens using Jupiter
-- `TRADE_WITH_JUP` - Trade tokens using Jupiter
+    agent = SolanaAgentKit(
+        private_key=PRIVATE_KEY,
+        rpc_url="https://api.mainnet-beta.solana.com"  # Mainnet RPC endpoint
+    )
 
-### DeBridge Actions
+    # Mainnet Token Mint Addresses:
+    USDC_MINT = Pubkey.from_string("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v")
+    SOL_MINT = Pubkey.from_string("So11111111111111111111111111111111111111112")
 
-- `CREATE_DEBRIDGE_TRANSACTION` - Create a cross-chain bridge transaction using deBridge Liquidity Network API
-- `EXECUTE_DEBRIDGE_TRANSACTION` - Execute a cross-chain bridge transaction using deBridge Liquidity Network API
-- `CHECK_TRANSACTION_STATUS` - Check the status of a cross-chain bridge transaction using deBridge Liquidity Network API
+    SWAP_AMOUNT_SOL = 0.0001
 
-### Pyth Actions
+    try:
+        print(f"Attempting to swap {SWAP_AMOUNT_SOL} SOL for USDC on Jupiter...")
+        transaction_signature = await TradeManager.trade(
+            agent=agent,
+            output_mint=USDC_MINT,
+            input_amount=SWAP_AMOUNT_SOL,
+            input_mint=SOL_MINT
+        )
 
-- `PYTH_GET_PRICE` - Get the price of a coin from Pyth
+        print(f"Swap successful!")
+        print(f"Transaction Signature: https://explorer.solana.com/tx/{transaction_signature}")
 
-### CoinGecko Actions
+        await asyncio.sleep(1)  # 1-second delay to help with rate limits due to RPC Delay
 
-- `COINGECKO_GET_TOKEN_INFO` - Get token information from CoinGecko
-- `COINGECKO_GET_COIN_PRICE_VS` - Get the price of a coin in a specific currency from Coingecko
-- `COINGECKO_GET_TOP_GAINERS` - Get the top gainers from Coingecko
-- `COINGECTO_GET_TRENDING_POOLS` - Get the trending pools from Coingecko
-- `COINGECKO_GET_TRENDING_TOKENS` - Get the trending tokens from Coingecko
-- `COINGECKO_GET_TOKEN_PRICE_DATA` - Get token price data from Coingecko
-- `COINGECKO_GET_LATEST_POOLS` - Get the latest pools from Coingecko
+    except Exception as e:
+        print(f"Error: Swap failed: {e}")
 
-## Security Considerations
+if __name__ == "__main__":
+    asyncio.run(main())
+Jupiter Exchange USDC - SOL
+from agentipy.agent import SolanaAgentKit
+from agentipy.tools.trade import TradeManager
+from solders.pubkey import Pubkey
+import asyncio
 
-- Keep your private key secure and never share it
-- Use environment variables for sensitive information
-- Consider using a dedicated wallet for AI agent operations
-- Regularly monitor and audit AI agent activities
-- Test operations on devnet/testnet before mainnet
+async def main():
+    """
+    Quick Start Example: Swap SOL for USDC on Jupiter Exchange using AgentiPy.
+    """
+    # **!!! IMPORTANT SECURITY WARNING !!!**
+    # NEVER hardcode your private key directly into your code, ESPECIALLY for Mainnet.
+    # This is for demonstration purposes ONLY.
+    # In a real application, use environment variables, secure key vaults, or other
+    # secure key management practices.  Compromising your private key can lead to
+    # loss of funds.
 
-## Troubleshooting
+    PRIVATE_KEY = "YOUR_PRIVATE_KEY_HERE"  # ⚠️ REPLACE THIS SECURELY! ⚠️
 
-If you encounter issues:
+    agent = SolanaAgentKit(
+        private_key=PRIVATE_KEY,
+        rpc_url="https://api.mainnet-beta.solana.com"  # Mainnet RPC endpoint
+    )
 
-1. Verify your Solana private key is correct
-2. Check your RPC URL is accessible
-3. Ensure all dependencies are installed correctly
-4. Verify your `.env` file contains the correct credentials
-5. Check Claude Desktop logs for error messages
+    USDC_MINT = Pubkey.from_string("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v")  # Mainnet USDC
+    SOL_MINT = Pubkey.from_string("So11111111111111111111111111111111111111112")   # Mainnet SOL
 
-## Dependencies
+    SWAP_AMOUNT_SOL = 0.0001  # A tiny amount of SOL to swap for USDC (adjust as needed)
 
-Key dependencies include:
+    try:
+        print(f"Attempting to swap {SWAP_AMOUNT_SOL} SOL for USDC on Jupiter...")
+        transaction_signature = await TradeManager.trade(
+            agent=agent,
+            output_mint=USDC_MINT,  # output token is USDC (what you receive)
+            input_amount=SWAP_AMOUNT_SOL, # Amount of input token (SOL)
+            input_mint=SOL_MINT      # input token is SOL (what you send/give)
+        )
 
-- [python-dotenv](https://pypi.org/project/python-dotenv/) - Environment management
-- [mcp](https://pypi.org/project/mcp/) - Model Context Protocol
+        print(f"Swap successful!")
+        print(f"Transaction Signature: https://explorer.solana.com/tx/{transaction_signature}")
 
-## Contributing
+    except Exception as e:
+        print(f"Error: Swap failed: {e}")
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+if __name__ == "__main__":
+    asyncio.run(main())
+Swap User-Specified Amount of SOL for User-Specified Token (Ticker or CA)
+from agentipy.agent import SolanaAgentKit
+from agentipy.tools.trade import TradeManager
+from agentipy.tools.use_coingecko import CoingeckoManager
+from agentipy.tools.get_token_data import TokenDataManager
+from solders.pubkey import Pubkey
+import asyncio
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+async def main():
+    """
+    Quick Start Example:
+    1. Swap User-Specified Amount of SOL for User-Specified Token (Ticker or CA) on Jupiter.
+    2. Fetch and display token data metrics from CoinGecko before swap confirmation.
+    """
+    # **!!! IMPORTANT SECURITY WARNING !!!**
+    # NEVER hardcode your private key directly into your code, ESPECIALLY for Mainnet.
+    # This is for demonstration purposes ONLY.
+    # In a real application, use environment variables, secure key vaults, or other
+    # secure key management practices.
 
-## License
+    PRIVATE_KEY = "YOUR_PRIVATE_KEY_HERE"  # ⚠️ REPLACE THIS SECURELY! ⚠️
 
-This project is licensed under the MIT License.
+    agent = SolanaAgentKit(
+        private_key=PRIVATE_KEY,
+        rpc_url="https://api.mainnet-beta.solana.com"  # Mainnet RPC endpoint
+    )
+
+    USDC_MINT = Pubkey.from_string("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v")  # Mainnet USDC
+    SOL_MINT = Pubkey.from_string("So11111111111111111111111111111111111111112")   # Mainnet SOL
+
+    # -------------------------------------------------------------
+    # Section 1: Get User Input for Target Token and Swap Amount
+    # -------------------------------------------------------------
+    target_token_input = input("Enter Target Token Ticker (e.g., USDC, BONK) or Contract Address: ").strip()
+    swap_amount_sol_input = input("Enter Amount of SOL to Swap: ").strip()
+
+    target_token_address = None
+    target_token_symbol = None
+    swap_amount_sol = None
+
+    try:
+        swap_amount_sol = float(swap_amount_sol_input)
+        if swap_amount_sol <= 0:
+            raise ValueError("Swap amount must be greater than zero.")
+    except ValueError:
+        print("Invalid SOL amount entered. Please enter a positive number.")
+        return  # Exit if swap amount is invalid
+
+
+    try:
+        # Try to parse as a Pubkey (Contract Address)
+        Pubkey.from_string(target_token_input)
+        target_token_address = target_token_input
+        print(f"Interpreting input as Contract Address: {target_token_address}")
+    except ValueError:
+        # If not a valid Pubkey, assume it's a Ticker
+        print(f"Interpreting input as Token Ticker: {target_token_input}")
+        try:
+            resolved_address = TokenDataManager.get_token_address_from_ticker(target_token_input)
+            if resolved_address:
+                target_token_address = resolved_address
+                token_data = TokenDataManager.get_token_data_by_address(Pubkey.from_string(target_token_address))
+                if token_data:
+                    target_token_symbol = token_data.symbol
+                else:
+                    target_token_symbol = target_token_input.upper() # Fallback to ticker
+                print(f"Resolved ticker '{target_token_input}' to Contract Address: {target_token_address}")
+            else:
+                raise ValueError(f"Could not resolve ticker '{target_token_input}' to a Contract Address.")
+        except Exception as resolve_error:
+            print(f"Error resolving ticker: {resolve_error}")
+            print("Please ensure you entered a valid Token Ticker or Contract Address.")
+            return  # Exit if ticker resolution fails
+
+    if target_token_address and swap_amount_sol is not None:
+        # -------------------------------------------------------------
+        # Section 2: Fetch and Display Token Data Metrics from CoinGecko
+        # -------------------------------------------------------------
+        try:
+            price_data = await CoingeckoManager.get_token_price_data(agent, [target_token_address])
+
+            if target_token_address in price_data and price_data[target_token_address]:
+                token_info = price_data[target_token_address]
+                display_symbol = target_token_symbol if target_token_symbol else target_token_input.upper()
+
+                print(f"\nData Metrics for {display_symbol} ({target_token_address}) from CoinGecko:")
+                print(f"- Current Price (USD): ${token_info['usd']:.4f}")
+                print(f"- Market Cap (USD): ${token_info['usd_market_cap']:.2f}")
+                print(f"- 24h Volume (USD): ${token_info['usd_24h_vol']:.2f}")
+                print(f"- 24h Change (%): {token_info['usd_24h_change']:.2f}%")
+                print(f"- Last Updated: {token_info['last_updated_at']}")
+                print("-" * 40)
+
+                # -------------------------------------------------------------
+                # Section 3: Confirm Swap with User
+                # -------------------------------------------------------------
+                confirmation = input(f"\nConfirm swap of {swap_amount_sol} SOL for {display_symbol}? (yes/no): ").lower()
+                if confirmation == "yes":
+                    try:
+                        print(f"Attempting to swap {swap_amount_sol} SOL for {display_symbol} on Jupiter...")
+                        transaction_signature = await TradeManager.trade(
+                            agent=agent,
+                            output_mint=Pubkey.from_string(target_token_address), 
+                            input_amount=swap_amount_sol, 
+                            input_mint=SOL_MINT
+                        )
+
+                        print(f"Swap successful!")
+                        print(f"Transaction Signature: https://explorer.solana.com/tx/{transaction_signature}")
+                        await asyncio.sleep(1) 
+
+                    except Exception as swap_error:
+                        print(f"Error: Swap failed: {swap_error}")
+                else:
+                    print("Swap cancelled by user.")
+
+            else:
+                print(f"Could not retrieve price data for {target_token_input} from CoinGecko.")
+        except Exception as e:
+            print(f"Error fetching token data metrics: {e}")
+    else:
+        print("No valid Token Ticker or Contract Address provided, or invalid swap amount.")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+2. Langchain Integration:
+Blitzlane can be seamlessly integrated with Langchain, a powerful framework for building language model-powered applications. This enables you to create intelligent agents that can understand natural language instructions, reason about blockchain data, and execute complex on-chain actions.
+
+Natural Language Command Interpretation: Use Langchain's language models (LLMs) to parse user instructions and map them to Blitzlane tool calls.
+
+Dynamic Workflow Generation: Design agents that can dynamically chain together multiple Blitzlane tools to accomplish complex goals.
+
+Enhanced Decision-Making: Leverage LLMs to analyze blockchain data (e.g., token prices, market conditions) and make intelligent trading or DeFi decisions.
+
+Example:
+
+from langchain.llms import OpenAI  # Or any other Langchain LLM
+from Blitzlane.agent import SolanaAgentKit
+from Blitzlane.tools.trade import TradeManager
+
+# Initialize Langchain LLM
+llm = OpenAI(openai_api_key="YOUR_OPENAI_API_KEY")  # Replace with your OpenAI API key
+agent = SolanaAgentKit(
+    private_key="YOUR_PRIVATE_KEY",
+    rpc_url="https://api.mainnet-beta.solana.com"
+)
+
+# Define a trading prompt
+prompt = "Buy 1 SOL of USDC"
+
+# Example - Basic text prompt 
+action = llm(prompt)  # Get action from the language model
+
+# Simplified trade example
+try:
+    TradeManager.trade(
+        agent=agent,
+        output_mint="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", #USDC on Solana mainnet
+        input_amount=0.1
+    )  # Simplified trade example
+    print(f"Performed action: {action}")
+except Exception as e:
+    print(f"Error processing trade: {e}")
+3. Model Context Protocol (MCP) Integration
+Blitzlane includes a built-in MCP module (Blitzlane/mcp) to expose on-chain actions via the Model Context Protocol. This enables standardized tool invocation by AI agents.
+
+ALL_ACTIONS
+# Blitzlane/mcp/all_actions.py
+from Blitzlane.mcp.allora import ALLORA_ACTIONS
+from Blitzlane.mcp.core import SOLANA_ACTIONS
+from Blitzlane.mcp.jupiter import JUPITER_ACTIONS
+
+ALL_ACTIONS = {
+    **SOLANA_ACTIONS,
+    **ALLORA_ACTIONS,
+    **JUPITER_ACTIONS,
+}
+Core Solana Actions
+GET_BALANCE: Fetch wallet SOL/SPL balances.
+TRANSFER: Transfer SOL or SPL tokens.
+DEPLOY_TOKEN: Deploy a new SPL token.
+Defined in Blitzlane/mcp/core/__init__.py using BalanceFetcher, TokenTransferManager, and TokenDeploymentManager.
+
+Allora Actions
+GET_ALL_TOPICS: List Allora inference topics.
+GET_PRICE_PREDICTION: Fetch BTC/ETH price predictions.
+GET_INFERENCE_BY_TOPIC_ID: Retrieve inference by topic ID.
+Defined in Blitzlane/mcp/allora and backed by AlloraManager.
+
+Jupiter Actions
+STAKE_WITH_JUP: Stake SOL for JUP rewards.
+TRADE_WITH_JUP: Execute token swaps on Jupiter.
+Defined in agentipy/mcp/jupiter using StakeManager and TradeManager.
+
+MCP Server
+# agentipy/mcp/mcp_server.py
+from mcp.server.fastmcp import FastMCP, Context
+from mcp.types import Tool, TextContent
+from agentipy.agent import SolanaAgentKit
+from agentipy.mcp.all_actions import ALL_ACTIONS
+
+# Initialize server with Solana tools
+mcp = FastMCP(
+    "agentipy-mcp",
+    instructions="Solana tools: Get balance, transfer SOL, price prediction, etc.",
+    dependencies=["pydantic", "httpx", "solana"],
+)
+# Functions to register, normalize kwargs, and run the server...
+This server auto-registers all tools in ALL_ACTIONS and can be started via:
+
+from agentipy.agent import SolanaAgentKit
+from agentipy.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
+
+agent = SolanaAgentKit(private_key="<KEY>", rpc_url="<RPC_URL>")
+start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
+Agentipy MCP Server for Claude Desktop
+A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Agentipy and enables AI agents to perform blockchain operations seamlessly.
+
+Claude Desktop Integration
+Agentipy MCP Server extends Claude's capabilities with blockchain tools:
+
+// Claude Desktop Configuration
+{
+  "mcpServers": {
+    "agentipy": {
+      "command": "./run_mcp.sh",
+      "autoApprove": ["GET_BALANCE", "PRICE_PREDICTION"]
+    }
+  }
+}
+Featured Tools:
+
+Balance checks
+Cross-chain swaps (deBridge)
+Pyth price feeds
+CoinGecko analytics
+AI-driven trading
+Explore our MCP Server full guide for Claude Desktop
+
+Security Considerations
+Keep private keys secure
+Use environment variables for sensitive data
+Test on devnet/testnet before mainnet
+🤝 Community Engagement and Contribution
+AgentiPy encourages community contributions, with developers invited to fork the repository at github.com/niceberginc/agentipy/, submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
+
+📜 Licensing and Contact Information
+AgentiPy is licensed under the MIT License, ensuring open access and flexibility for developers. For support, contact support@agentipy.com, follow updates on X at @AgentiPy, or join the community on Discord at Join our Discord Community.
+
+👥 Contributors
+Become a contributor! Open an issue or submit a pull request to join us!
