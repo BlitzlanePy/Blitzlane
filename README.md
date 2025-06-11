@@ -7,90 +7,123 @@
 
 	
 
-Blitzlane: Your AI Agent Toolkit for Blockchain Applications
+# Blitzlane: Your AI Agent Toolkit for Blockchain Applications
+
 Blitzlane is a Python toolkit designed to empower AI agents to interact seamlessly with blockchain applications, focusing on Solana and Base. It simplifies the development of decentralized applications (dApps) by providing tools for token management, NFT handling, and more. With a focus on ease of use and powerful functionality, Blitzlane allows developers to create robust and sophisticated blockchain-based solutions, leveraging AI-driven workflows.
 
-GitHub Stars Open Issues Python Version License
 
-🚀 Introduction
+
+[<img src="https://img.shields.io/github/stars/fastlanepython/FastlanePy?style=social" alt="GitHub Stars">](https://github.com/BlitzlanePy/Blitzlane)
+[<img src="https://img.shields.io/github/issues/fastlanepython/FastlanePy" alt="Open Issues">](https://github.com/BlitzlanePy/Blitzlane))
+[<img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python Version">](https://github.com/BlitzlanePy/Blitzlane)
+[<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">](https://github.com/BlitzlanePy/Blitzlane)
+## 🚀 Introduction
+
 Blitzlane bridges the gap between AI agents and blockchain applications. It provides a streamlined development experience for building decentralized applications (dApps) that leverage the power of AI on Solana and Base. From automated trading to complex DeFi interactions, Blitzlane equips developers with the tools needed to build intelligent on-chain solutions.
 
-✨ Key Features
-Broad Protocol Support: Supports a wide range of protocols on Solana and Base (See Detailed Protocol Table Below).
-Asynchronous Operations: Utilizes asynchronous programming for efficient blockchain interactions.
-Easy Integration: Designed for seamless integration into existing AI agent frameworks and dApp projects.
-Comprehensive Toolset: Provides tools for token trading, NFT management, DeFi interactions, and more.
-Extensible Design: Allows developers to create custom protocols and actions.
-Coingecko Integration: Enhanced with new tooling to explore trending tokens, prices, and new pools
-Streamlined Development: Provides essential utility functions such as price fetching, balance checks, and transaction confirmation.
-Model Context Protocol (MCP) Support: Includes a built-in MCP server module and supports integration with dedicated MCP servers (like the Blitzlane-mcp for Claude Desktop) for standardized AI interaction.
-📦 Installation and Setup
+## ✨ Key Features
+
+*   **Broad Protocol Support:** Supports a wide range of protocols on Solana and Base (See Detailed Protocol Table Below).
+*   **Asynchronous Operations:** Utilizes asynchronous programming for efficient blockchain interactions.
+*   **Easy Integration:** Designed for seamless integration into existing AI agent frameworks and dApp projects.
+*   **Comprehensive Toolset:** Provides tools for token trading, NFT management, DeFi interactions, and more.
+*   **Extensible Design:** Allows developers to create custom protocols and actions.
+*   **Coingecko Integration**: Enhanced with new tooling to explore trending tokens, prices, and new pools
+*   **Streamlined Development:** Provides essential utility functions such as price fetching, balance checks, and transaction confirmation.
+*   **Model Context Protocol (MCP) Support:** Includes a built-in MCP server module and supports integration with dedicated MCP servers (like the Blitzlane-mcp for Claude Desktop) for standardized AI interaction.
+
+## 📦 Installation and Setup
+
 Before you begin, ensure you have the following prerequisites:
 
-Python 3.8+: Required for running the toolkit.
-Solana CLI: For Solana-specific actions (e.g., wallet creation).
-Langchain: For AI integration (pip install langchain).
-Wallet with Private Keys: Crucial for signing and sending transactions. Securely manage your private keys!
-API Keys (Optional): For accessing various blockchain networks or external data sources (e.g., CoinGecko, Allora, e.t.c.).
+*   **Python 3.8+:** Required for running the toolkit.
+*   **Solana CLI:** For Solana-specific actions (e.g., wallet creation).
+*   **Langchain:** For AI integration (`pip install langchain`).
+*   **Wallet with Private Keys:**  Crucial for signing and sending transactions.  **Securely manage your private keys!**
+*   **API Keys (Optional):** For accessing various blockchain networks or external data sources (e.g., CoinGecko, Allora, e.t.c.).
+
 Follow these steps to install and set up Blitzlane:
 
-Create a Virtual Environment (Recommended): Isolate your project dependencies.
-python -m venv venv
-Activate the Virtual Environment:
-Linux/macOS:
-source venv/bin/activate
-Windows:
-venv\Scripts\activate
-Install Blitzlane:
-pip install Blitzlane
-Verify Installation:
-import Blitzlane
-print(Blitzlane.__version__)  # Example output: 2.0.2
-🛠️ Supported Protocols and Tools
-Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+1.  **Create a Virtual Environment (Recommended):**  Isolate your project dependencies.
+    ```bash
+    python -m venv venv
+    ```
+2.  **Activate the Virtual Environment:**
+    *   **Linux/macOS:**
+        ```bash
+        source venv/bin/activate
+        ```
+    *   **Windows:**
+        ```bash
+        venv\Scripts\activate
+        ```
+3.  **Install Blitzlane:**
+    ```bash
+    pip install Blitzlane
+    ```
+4.  **Verify Installation:**
+    ```python
+    import Blitzlane
+    print(Blitzlane.__version__)  # Example output: 2.0.2
+    ```
 
-🛠️ Supported Protocols and Tools
-Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+## 🛠️ Supported Protocols and Tools
 
-Protocol	Blockchain	Actions	GitHub Tool Link
-Jupiter	Solana	Token swaps, direct routing, stake SOL	Jupiter Swap Tool
-PumpFun	Solana	Buy/sell tokens, launch tokens, retrieve/calculate pump curve states	PumpFun Buy Tool
-Raydium	Solana	Buy/sell tokens, provide liquidity	Raydium Trade Tool
-Metaplex	Solana	NFT minting, collection deployment, metadata/royalty management	Metaplex Mint Tool
-DexScreener	Solana	Get token data by ticker/address	DexScreener Data Tool
-Helius	Solana	Fetch balances, NFT mint lists, events, webhooks	Helius Balance Tool
-MoonShot	Solana	Buy/sell with collateral, slippage options	MoonShot Trade Tool
-SNS	Solana	Get token data by ticker/address	SNS Data Tool
-Cybers	Solana	Authenticate wallet, create coin	Cybers Auth Tool
-Adrena	Solana	Open/close perpetual trades (long/short)	Adrena Trade Tool
-Drift	Solana	Manage user accounts, deposit/withdraw, perp trades, account info	Drift Account Tool
-Flash	Solana	Open/close trades	Flash Trade Tool
-Jito	Solana	Manage tip accounts, bundle transactions	Jito Tip Tool
-Lulo	Solana	Lend assets to earn interest, Withdraw tokens	Lulo Lend Tool
-RugCheck	Solana	Fetch detailed/summary token reports	RugCheck Report Tool
-All Domains	Solana	Resolve domains, get owned domains	All Domains Resolve Tool
-Orca	Solana	Manage liquidity pools, positions	Orca Position Tool
-Backpack	Solana	Manage account balances, settings, borrowing	Backpack Balance Tool
-OpenBook	Solana	Create markets	OpenBook Market Tool
-Light Protocol	Solana	Send compressed airdrops	Light Airdrop Tool
-Pyth Network	Solana	Fetch token prices	Pyth Price Fetch Tool
-Manifest	Solana	Create markets, place/cancel orders	Manifest Order Tool
-Stork	Solana	Get real-time token price feed	Stork Price Feed Tool
-Gibwork	Solana	Create tasks with token rewards	Gibwork Task Tool
-Meteora	Solana	Create DLMM pools with configurations	Meteora Pool Tool
-StakeWithJup	Solana	Stakes JUP to earn JUP tokens	Stake With Jup tool
-ThreeLand	Solana	ThreeLand NFT mint and deploy	ThreeLand NFT mint tool
-ThreeLand	Solana	ThreeLand NFT mint and deploy	ThreeLand NFT mint tool
-Elfa AI	Solana	Get trending tokens, mentions, smart account stats	Elfa AI Tool
-FluxBeam	Solana	Create a new pool	FluxBeam Tool
-Blitzlane MCP	Solana	Extensible Solana toolset via a Model Context Protocol server	MCP tool
-Claude Desktop MCP	Solana	Claude‐compatible MCP server exposing onchain actions	Blitzlane MCP Server for Claude Desktop
-🚀 Quick Start Example
+FastlanePy supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+
+## 🛠️ Supported Protocols and Tools
+
+FastlanePy supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+
+| Protocol       | Blockchain | Actions                                                        | GitHub Tool Link                                                                            |
+| :------------- | :--------- | :------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+| Jupiter        | Solana     | Token swaps, direct routing, stake SOL                        | [Jupiter Swap Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/stake_with_jup.py) |
+| PumpFun        | Solana     | Buy/sell tokens, launch tokens, retrieve/calculate pump curve states | [PumpFun Buy Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_pumpfun.py) |
+| Raydium        | Solana     | Buy/sell tokens, provide liquidity                             | [Raydium Trade Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_raydium.py) |
+| Metaplex       | Solana     | NFT minting, collection deployment, metadata/royalty management| [Metaplex Mint Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_metaplex.py) |
+| DexScreener    | Solana     | Get token data by ticker/address                               | [DexScreener Data Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/get_token_data.py) |
+| Helius         | Solana     | Fetch balances, NFT mint lists, events, webhooks             | [Helius Balance Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_helius.py) |
+| MoonShot       | Solana     | Buy/sell with collateral, slippage options                    | [MoonShot Trade Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_moonshot.py) |
+| SNS            | Solana     | Get token data by ticker/address                               | [SNS Data Tool](hhttps://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_sns.py) |
+| Cybers         | Solana     | Authenticate wallet, create coin                             | [Cybers Auth Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_cybers.py) |
+| Adrena         | Solana     | Open/close perpetual trades (long/short)                     | [Adrena Trade Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_adrena.py) |
+| Drift          | Solana     | Manage user accounts, deposit/withdraw, perp trades, account info  | [Drift Account Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_drift.py) |
+| Flash          | Solana     | Open/close trades                                               | [Flash Trade Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_flash.py) |
+| Jito           | Solana     | Manage tip accounts, bundle transactions                      | [Jito Tip Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_jito.py) |
+| Lulo           | Solana     | Lend assets to earn interest, Withdraw tokens           | [Lulo Lend Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_lulo.py) |
+| RugCheck       | Solana     | Fetch detailed/summary token reports                           | [RugCheck Report Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_rugcheck.py) |
+| All Domains    | Solana     | Resolve domains, get owned domains                             | [All Domains Resolve Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_alldomains.py) |
+| Orca           | Solana     | Manage liquidity pools, positions                              | [Orca Position Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_orca.py) |
+| Backpack       | Solana     | Manage account balances, settings, borrowing                    | [Backpack Balance Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_backpack.py) |
+| OpenBook       | Solana     | Create markets                                                   | [OpenBook Market Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_openpook.py) |
+| Light Protocol | Solana     | Send compressed airdrops                                        | [Light Airdrop Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_lightprotocol.py) |
+| Pyth Network   | Solana     | Fetch token prices                                              | [Pyth Price Fetch Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_pyth.py) |
+| Manifest       | Solana     | Create markets, place/cancel orders                            | [Manifest Order Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_manifest.py) |
+| Stork          | Solana     | Get real-time token price feed                                 | [Stork Price Feed Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_stork.py) |
+| Gibwork        | Solana     | Create tasks with token rewards                                  | [Gibwork Task Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_gibwork.py) |
+| Meteora        | Solana     | Create DLMM pools with configurations                           | [Meteora Pool Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/create_meteora_dlmm_pool.py) |
+| StakeWithJup    | Solana     | Stakes JUP to earn JUP tokens                 | [Stake With Jup tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/stake_with_jup.py) |
+|ThreeLand    | Solana     | ThreeLand NFT mint and deploy        | [ThreeLand NFT mint tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_3land.py) |
+| ThreeLand    | Solana     | ThreeLand NFT mint and deploy        | [ThreeLand NFT mint tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_3land.py) |
+| Elfa AI       | Solana     | Get trending tokens, mentions, smart account stats              | [Elfa AI Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_elfa_ai.py) |
+| FluxBeam      | Solana     | Create a new pool                                               | [FluxBeam Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_fluxbeam.py) |
+| FastlanePy MCP          | Solana     | Extensible Solana toolset via a Model Context Protocol server       | [MCP tool](https://github.com/fastlanepython/FastlanePy/tree/main/FastlanePy/mcp)             |
+| Claude Desktop MCP    | Solana     | Claude‐compatible MCP server exposing onchain actions | [FastlanePy MCP Server for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp) |
+
+
+
+
+
+## 🚀 Quick Start Example
+
+
 Important Security Note: Never hardcode your private key directly into your code. Use environment variables or secure key management systems in a production environment.
 
-Transfer SOL/SPL: Easily send tokens.
-from Blitzlane.agent import SolanaAgentKit
-from Blitzlane.tools.transfer import TokenTransferManager
+
+## Transfer SOL/SPL: Easily send tokens.
+```python
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.transfer import TokenTransferManager
 import asyncio
 
 async def main():
@@ -128,7 +161,10 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-Checking Sol Balance Using FastlanePy
+
+```
+## Checking Sol Balance Using FastlanePy
+```python
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.tools.get_balance import BalanceFetcher
 import asyncio
@@ -158,7 +194,10 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-CoinGecko Market Data Metrics & Trending Tokens
+
+```
+## CoinGecko Market Data Metrics & Trending Tokens
+```python
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.tools.use_coingecko import CoingeckoManager
 from FastlanePy.tools.get_token_data import TokenDataManager
@@ -237,7 +276,9 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-Jupiter Exchange SOL - USDC
+```
+## Jupiter Exchange SOL - USDC
+```python
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.tools.trade import TradeManager
 from solders.pubkey import Pubkey
@@ -285,7 +326,9 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-Jupiter Exchange USDC - SOL
+```
+## Jupiter Exchange  USDC - SOL 
+```python
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.tools.trade import TradeManager
 from solders.pubkey import Pubkey
@@ -331,7 +374,11 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-Swap User-Specified Amount of SOL for User-Specified Token (Ticker or CA)
+```
+
+---
+## Swap User-Specified Amount of SOL for User-Specified Token (Ticker or CA) 
+```python
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.tools.trade import TradeManager
 from FastlanePy.tools.use_coingecko import CoingeckoManager
@@ -456,17 +503,19 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-2. Langchain Integration:
+```
+
+# 2. Langchain Integration:
 FastlanePy can be seamlessly integrated with Langchain, a powerful framework for building language model-powered applications. This enables you to create intelligent agents that can understand natural language instructions, reason about blockchain data, and execute complex on-chain actions.
 
-Natural Language Command Interpretation: Use Langchain's language models (LLMs) to parse user instructions and map them to FastlanePy tool calls.
+* Natural Language Command Interpretation: Use Langchain's language models (LLMs) to parse user instructions and map them to FastlanePy tool calls.
 
-Dynamic Workflow Generation: Design agents that can dynamically chain together multiple FastlanePy tools to accomplish complex goals.
+* Dynamic Workflow Generation: Design agents that can dynamically chain together multiple FastlanePy tools to accomplish complex goals.
 
-Enhanced Decision-Making: Leverage LLMs to analyze blockchain data (e.g., token prices, market conditions) and make intelligent trading or DeFi decisions.
+* Enhanced Decision-Making: Leverage LLMs to analyze blockchain data (e.g., token prices, market conditions) and make intelligent trading or DeFi decisions.
 
-Example:
-
+**Example:**
+```python
 from langchain.llms import OpenAI  # Or any other Langchain LLM
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.tools.trade import TradeManager
@@ -494,10 +543,16 @@ try:
     print(f"Performed action: {action}")
 except Exception as e:
     print(f"Error processing trade: {e}")
-3. Model Context Protocol (MCP) Integration
-FastlanePy includes a built-in MCP module (FastlanePy/mcp) to expose on-chain actions via the Model Context Protocol. This enables standardized tool invocation by AI agents.
+```
 
-ALL_ACTIONS
+
+# 3. Model Context Protocol (MCP) Integration
+
+FastlanePy includes a built-in MCP module (`FastlanePy/mcp`) to expose on-chain actions via the Model Context Protocol. This enables standardized tool invocation by AI agents.
+
+### ALL_ACTIONS
+
+```python
 # FastlanePy/mcp/all_actions.py
 from FastlanePy.mcp.allora import ALLORA_ACTIONS
 from FastlanePy.mcp.core import SOLANA_ACTIONS
@@ -508,24 +563,31 @@ ALL_ACTIONS = {
     **ALLORA_ACTIONS,
     **JUPITER_ACTIONS,
 }
-Core Solana Actions
-GET_BALANCE: Fetch wallet SOL/SPL balances.
-TRANSFER: Transfer SOL or SPL tokens.
-DEPLOY_TOKEN: Deploy a new SPL token.
-Defined in FastlanePy/mcp/core/__init__.py using BalanceFetcher, TokenTransferManager, and TokenDeploymentManager.
+```
 
-Allora Actions
-GET_ALL_TOPICS: List Allora inference topics.
-GET_PRICE_PREDICTION: Fetch BTC/ETH price predictions.
-GET_INFERENCE_BY_TOPIC_ID: Retrieve inference by topic ID.
-Defined in FastlanePy/mcp/allora and backed by AlloraManager.
+### Core Solana Actions
+- `GET_BALANCE`: Fetch wallet SOL/SPL balances.
+- `TRANSFER`: Transfer SOL or SPL tokens.
+- `DEPLOY_TOKEN`: Deploy a new SPL token.
 
-Jupiter Actions
-STAKE_WITH_JUP: Stake SOL for JUP rewards.
-TRADE_WITH_JUP: Execute token swaps on Jupiter.
-Defined in FastlanePy/mcp/jupiter using StakeManager and TradeManager.
+Defined in `FastlanePy/mcp/core/__init__.py` using `BalanceFetcher`, `TokenTransferManager`, and `TokenDeploymentManager`.
 
-MCP Server
+### Allora Actions
+- `GET_ALL_TOPICS`: List Allora inference topics.
+- `GET_PRICE_PREDICTION`: Fetch BTC/ETH price predictions.
+- `GET_INFERENCE_BY_TOPIC_ID`: Retrieve inference by topic ID.
+
+Defined in `FastlanePy/mcp/allora` and backed by `AlloraManager`.
+
+### Jupiter Actions
+- `STAKE_WITH_JUP`: Stake SOL for JUP rewards.
+- `TRADE_WITH_JUP`: Execute token swaps on Jupiter.
+
+Defined in `FastlanePy/mcp/jupiter` using `StakeManager` and `TradeManager`.
+
+### MCP Server
+
+```python
 # FastlanePy/mcp/mcp_server.py
 from mcp.server.fastmcp import FastMCP, Context
 from mcp.types import Tool, TextContent
@@ -539,19 +601,30 @@ mcp = FastMCP(
     dependencies=["pydantic", "httpx", "solana"],
 )
 # Functions to register, normalize kwargs, and run the server...
-This server auto-registers all tools in ALL_ACTIONS and can be started via:
+```
 
+This server auto-registers all tools in `ALL_ACTIONS` and can be started via:
+
+```python
 from FastlanePy.agent import SolanaAgentKit
 from FastlanePy.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
 
 agent = SolanaAgentKit(private_key="<KEY>", rpc_url="<RPC_URL>")
 start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
-FastlanePy MCP Server for Claude Desktop
+```
+
+---
+
+## FastlanePy MCP Server for Claude Desktop
+
 A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses FastlanePy and enables AI agents to perform blockchain operations seamlessly.
 
-Claude Desktop Integration
-FastlanePy MCP Server extends Claude's capabilities with blockchain tools:
 
+###  Claude Desktop Integration
+
+**[FastlanePy MCP Server](https://github.com/fastlanepython/FastlanePy-mcp)** extends Claude's capabilities with blockchain tools:
+
+```json
 // Claude Desktop Configuration
 {
   "mcpServers": {
@@ -561,24 +634,42 @@ FastlanePy MCP Server extends Claude's capabilities with blockchain tools:
     }
   }
 }
-Featured Tools:
+```
 
-Balance checks
-Cross-chain swaps (deBridge)
-Pyth price feeds
-CoinGecko analytics
-AI-driven trading
-Explore our MCP Server full guide for Claude Desktop
+**Featured Tools:**
+-  Balance checks
+-  Cross-chain swaps (deBridge)
+-  Pyth price feeds
+-  CoinGecko analytics
+-  AI-driven trading
 
-Security Considerations
-Keep private keys secure
-Use environment variables for sensitive data
-Test on devnet/testnet before mainnet
-🤝 Community Engagement and Contribution
-FastlanePy encourages community contributions, with developers invited to fork the repository at github.com/fastlanepython/FastlanePy/, submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
+[Explore our MCP Server full guide for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp)
 
-📜 Licensing and Contact Information
-FastlanePy is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at @FastlanePy.
+## Security Considerations
 
-👥 Contributors
-Become a contributor! Open an issue or submit a pull request to join us!
+- Keep private keys secure
+- Use environment variables for sensitive data
+- Test on devnet/testnet before mainnet
+
+
+### 🤝  Community Engagement and Contribution
+FastlanePy encourages community contributions, with developers invited to fork the repository at [github.com/fastlanepython/FastlanePy/](https://github.com/fastlanepython/FastlanePy/), submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
+
+#### 📜 Licensing and Contact Information
+FastlanePy is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at [@FastlanePy](https://x.com/FastlanePy).
+
+
+
+
+
+
+
+
+
+### 👥 Contributors
+
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+[Become a contributor!](https://github.com/fastlanepython/FastlanePy/blob/main/CONTRIBUTING.md) Open an issue or submit a pull request to join us!
