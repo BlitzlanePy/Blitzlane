@@ -596,7 +596,7 @@ from FastlanePy.mcp.all_actions import ALL_ACTIONS
 
 # Initialize server with Solana tools
 mcp = FastMCP(
-    "FastlanePy-mcp",
+    "Blitzlane-mcp",
     instructions="Solana tools: Get balance, transfer SOL, price prediction, etc.",
     dependencies=["pydantic", "httpx", "solana"],
 )
@@ -606,8 +606,8 @@ mcp = FastMCP(
 This server auto-registers all tools in `ALL_ACTIONS` and can be started via:
 
 ```python
-from FastlanePy.agent import SolanaAgentKit
-from FastlanePy.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
+from Blitzlane.agent import SolanaAgentKit
+from Blitzlane.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
 
 agent = SolanaAgentKit(private_key="<KEY>", rpc_url="<RPC_URL>")
 start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
@@ -615,20 +615,20 @@ start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
 
 ---
 
-## FastlanePy MCP Server for Claude Desktop
+## Blitzlane MCP Server for Claude Desktop
 
-A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses FastlanePy and enables AI agents to perform blockchain operations seamlessly.
+A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Blitzlane and enables AI agents to perform blockchain operations seamlessly.
 
 
 ###  Claude Desktop Integration
 
-**[FastlanePy MCP Server](https://github.com/fastlanepython/FastlanePy-mcp)** extends Claude's capabilities with blockchain tools:
+**[Blitzlane MCP Server](https://github.com/fastlanepython/FastlanePy-mcp)** extends Claude's capabilities with blockchain tools:
 
 ```json
 // Claude Desktop Configuration
 {
   "mcpServers": {
-    "FastlanePy": {
+    "FBlitzlane": {
       "command": "./run_mcp.sh",
       "autoApprove": ["GET_BALANCE", "PRICE_PREDICTION"]
     }
@@ -643,7 +643,7 @@ A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI
 -  CoinGecko analytics
 -  AI-driven trading
 
-[Explore our MCP Server full guide for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp)
+[Explore our MCP Server full guide for Claude Desktop]
 
 ## Security Considerations
 
@@ -653,10 +653,10 @@ A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI
 
 
 ### 🤝  Community Engagement and Contribution
-FastlanePy encourages community contributions, with developers invited to fork the repository at [github.com/fastlanepython/FastlanePy/](https://github.com/fastlanepython/FastlanePy/), submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
+Blitzlane encourages community contributions, with developers invited to fork the repository at [github.com/BlitzlanePy/Blitzlane/](https://github.com/BlitzlanePy/Blitzlane/), submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
 
 #### 📜 Licensing and Contact Information
-FastlanePy is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at [@FastlanePy](https://x.com/FastlanePy).
+Blitzlane is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at [@Blitzlane](https://x.com/Blitzlane).
 
 
 
