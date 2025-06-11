@@ -69,11 +69,11 @@ Follow these steps to install and set up Blitzlane:
 
 ## 🛠️ Supported Protocols and Tools
 
-FastlanePy supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
 
 ## 🛠️ Supported Protocols and Tools
 
-FastlanePy supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
 
 | Protocol       | Blockchain | Actions                                                        | GitHub Tool Link                                                                            |
 | :------------- | :--------- | :------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
@@ -107,8 +107,8 @@ FastlanePy supports a diverse set of protocols, each with specific actions. This
 | ThreeLand    | Solana     | ThreeLand NFT mint and deploy        | [ThreeLand NFT mint tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_3land.py) |
 | Elfa AI       | Solana     | Get trending tokens, mentions, smart account stats              | [Elfa AI Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_elfa_ai.py) |
 | FluxBeam      | Solana     | Create a new pool                                               | [FluxBeam Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_fluxbeam.py) |
-| FastlanePy MCP          | Solana     | Extensible Solana toolset via a Model Context Protocol server       | [MCP tool](https://github.com/fastlanepython/FastlanePy/tree/main/FastlanePy/mcp)             |
-| Claude Desktop MCP    | Solana     | Claude‐compatible MCP server exposing onchain actions | [FastlanePy MCP Server for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp) |
+| Blitzlane MCP          | Solana     | Extensible Solana toolset via a Model Context Protocol server       | [MCP tool](https://github.com/fastlanepython/FastlanePy/tree/main/FastlanePy/mcp)             |
+| Claude Desktop MCP    | Solana     | Claude‐compatible MCP server exposing onchain actions | [Blitzlane MCP Server for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp) |
 
 
 
@@ -122,8 +122,8 @@ Important Security Note: Never hardcode your private key directly into your code
 
 ## Transfer SOL/SPL: Easily send tokens.
 ```python
-from FastlanePy.agent import SolanaAgentKit
-from FastlanePy.tools.transfer import TokenTransferManager
+from Blitzlane.agent import SolanaAgentKit
+from Blitzlane.tools.transfer import TokenTransferManager
 import asyncio
 
 async def main():
@@ -163,10 +163,10 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 ```
-## Checking Sol Balance Using FastlanePy
+## Checking Sol Balance Using Blitzlane
 ```python
-from FastlanePy.agent import SolanaAgentKit
-from FastlanePy.tools.get_balance import BalanceFetcher
+from Blitzlane.agent import SolanaAgentKit
+from Blitzlane.tools.get_balance import BalanceFetcher
 import asyncio
 
 async def main():
