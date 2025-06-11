@@ -7,9 +7,10 @@
 
 	
 
+Blitzlane: Your AI Agent Toolkit for Blockchain Applications
 Blitzlane is a Python toolkit designed to empower AI agents to interact seamlessly with blockchain applications, focusing on Solana and Base. It simplifies the development of decentralized applications (dApps) by providing tools for token management, NFT handling, and more. With a focus on ease of use and powerful functionality, Blitzlane allows developers to create robust and sophisticated blockchain-based solutions, leveraging AI-driven workflows.
 
-GitHub Stars GitHub Forks Total Downloads PyPI Version Open Issues Python Version License
+GitHub Stars Open Issues Python Version License
 
 🚀 Introduction
 Blitzlane bridges the gap between AI agents and blockchain applications. It provides a streamlined development experience for building decentralized applications (dApps) that leverage the power of AI on Solana and Base. From automated trading to complex DeFi interactions, Blitzlane equips developers with the tools needed to build intelligent on-chain solutions.
@@ -127,9 +128,9 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-Checking Sol Balance Using Agentipy
-from agentipy.agent import SolanaAgentKit
-from agentipy.tools.get_balance import BalanceFetcher
+Checking Sol Balance Using FastlanePy
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.get_balance import BalanceFetcher
 import asyncio
 
 async def main():
@@ -158,9 +159,9 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 CoinGecko Market Data Metrics & Trending Tokens
-from agentipy.agent import SolanaAgentKit
-from agentipy.tools.use_coingecko import CoingeckoManager
-from agentipy.tools.get_token_data import TokenDataManager
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.use_coingecko import CoingeckoManager
+from FastlanePy.tools.get_token_data import TokenDataManager
 from solders.pubkey import Pubkey
 import asyncio
 
@@ -237,8 +238,8 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 Jupiter Exchange SOL - USDC
-from agentipy.agent import SolanaAgentKit
-from agentipy.tools.trade import TradeManager
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.trade import TradeManager
 from solders.pubkey import Pubkey
 import asyncio
 
@@ -285,14 +286,14 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 Jupiter Exchange USDC - SOL
-from agentipy.agent import SolanaAgentKit
-from agentipy.tools.trade import TradeManager
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.trade import TradeManager
 from solders.pubkey import Pubkey
 import asyncio
 
 async def main():
     """
-    Quick Start Example: Swap SOL for USDC on Jupiter Exchange using AgentiPy.
+    Quick Start Example: Swap SOL for USDC on Jupiter Exchange using FastlanePy.
     """
     # **!!! IMPORTANT SECURITY WARNING !!!**
     # NEVER hardcode your private key directly into your code, ESPECIALLY for Mainnet.
@@ -331,10 +332,10 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 Swap User-Specified Amount of SOL for User-Specified Token (Ticker or CA)
-from agentipy.agent import SolanaAgentKit
-from agentipy.tools.trade import TradeManager
-from agentipy.tools.use_coingecko import CoingeckoManager
-from agentipy.tools.get_token_data import TokenDataManager
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.trade import TradeManager
+from FastlanePy.tools.use_coingecko import CoingeckoManager
+from FastlanePy.tools.get_token_data import TokenDataManager
 from solders.pubkey import Pubkey
 import asyncio
 
@@ -456,19 +457,19 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 2. Langchain Integration:
-Blitzlane can be seamlessly integrated with Langchain, a powerful framework for building language model-powered applications. This enables you to create intelligent agents that can understand natural language instructions, reason about blockchain data, and execute complex on-chain actions.
+FastlanePy can be seamlessly integrated with Langchain, a powerful framework for building language model-powered applications. This enables you to create intelligent agents that can understand natural language instructions, reason about blockchain data, and execute complex on-chain actions.
 
-Natural Language Command Interpretation: Use Langchain's language models (LLMs) to parse user instructions and map them to Blitzlane tool calls.
+Natural Language Command Interpretation: Use Langchain's language models (LLMs) to parse user instructions and map them to FastlanePy tool calls.
 
-Dynamic Workflow Generation: Design agents that can dynamically chain together multiple Blitzlane tools to accomplish complex goals.
+Dynamic Workflow Generation: Design agents that can dynamically chain together multiple FastlanePy tools to accomplish complex goals.
 
 Enhanced Decision-Making: Leverage LLMs to analyze blockchain data (e.g., token prices, market conditions) and make intelligent trading or DeFi decisions.
 
 Example:
 
 from langchain.llms import OpenAI  # Or any other Langchain LLM
-from Blitzlane.agent import SolanaAgentKit
-from Blitzlane.tools.trade import TradeManager
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.tools.trade import TradeManager
 
 # Initialize Langchain LLM
 llm = OpenAI(openai_api_key="YOUR_OPENAI_API_KEY")  # Replace with your OpenAI API key
@@ -494,13 +495,13 @@ try:
 except Exception as e:
     print(f"Error processing trade: {e}")
 3. Model Context Protocol (MCP) Integration
-Blitzlane includes a built-in MCP module (Blitzlane/mcp) to expose on-chain actions via the Model Context Protocol. This enables standardized tool invocation by AI agents.
+FastlanePy includes a built-in MCP module (FastlanePy/mcp) to expose on-chain actions via the Model Context Protocol. This enables standardized tool invocation by AI agents.
 
 ALL_ACTIONS
-# Blitzlane/mcp/all_actions.py
-from Blitzlane.mcp.allora import ALLORA_ACTIONS
-from Blitzlane.mcp.core import SOLANA_ACTIONS
-from Blitzlane.mcp.jupiter import JUPITER_ACTIONS
+# FastlanePy/mcp/all_actions.py
+from FastlanePy.mcp.allora import ALLORA_ACTIONS
+from FastlanePy.mcp.core import SOLANA_ACTIONS
+from FastlanePy.mcp.jupiter import JUPITER_ACTIONS
 
 ALL_ACTIONS = {
     **SOLANA_ACTIONS,
@@ -511,50 +512,50 @@ Core Solana Actions
 GET_BALANCE: Fetch wallet SOL/SPL balances.
 TRANSFER: Transfer SOL or SPL tokens.
 DEPLOY_TOKEN: Deploy a new SPL token.
-Defined in Blitzlane/mcp/core/__init__.py using BalanceFetcher, TokenTransferManager, and TokenDeploymentManager.
+Defined in FastlanePy/mcp/core/__init__.py using BalanceFetcher, TokenTransferManager, and TokenDeploymentManager.
 
 Allora Actions
 GET_ALL_TOPICS: List Allora inference topics.
 GET_PRICE_PREDICTION: Fetch BTC/ETH price predictions.
 GET_INFERENCE_BY_TOPIC_ID: Retrieve inference by topic ID.
-Defined in Blitzlane/mcp/allora and backed by AlloraManager.
+Defined in FastlanePy/mcp/allora and backed by AlloraManager.
 
 Jupiter Actions
 STAKE_WITH_JUP: Stake SOL for JUP rewards.
 TRADE_WITH_JUP: Execute token swaps on Jupiter.
-Defined in agentipy/mcp/jupiter using StakeManager and TradeManager.
+Defined in FastlanePy/mcp/jupiter using StakeManager and TradeManager.
 
 MCP Server
-# agentipy/mcp/mcp_server.py
+# FastlanePy/mcp/mcp_server.py
 from mcp.server.fastmcp import FastMCP, Context
 from mcp.types import Tool, TextContent
-from agentipy.agent import SolanaAgentKit
-from agentipy.mcp.all_actions import ALL_ACTIONS
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.mcp.all_actions import ALL_ACTIONS
 
 # Initialize server with Solana tools
 mcp = FastMCP(
-    "agentipy-mcp",
+    "FastlanePy-mcp",
     instructions="Solana tools: Get balance, transfer SOL, price prediction, etc.",
     dependencies=["pydantic", "httpx", "solana"],
 )
 # Functions to register, normalize kwargs, and run the server...
 This server auto-registers all tools in ALL_ACTIONS and can be started via:
 
-from agentipy.agent import SolanaAgentKit
-from agentipy.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
+from FastlanePy.agent import SolanaAgentKit
+from FastlanePy.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
 
 agent = SolanaAgentKit(private_key="<KEY>", rpc_url="<RPC_URL>")
 start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
-Agentipy MCP Server for Claude Desktop
-A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Agentipy and enables AI agents to perform blockchain operations seamlessly.
+FastlanePy MCP Server for Claude Desktop
+A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses FastlanePy and enables AI agents to perform blockchain operations seamlessly.
 
 Claude Desktop Integration
-Agentipy MCP Server extends Claude's capabilities with blockchain tools:
+FastlanePy MCP Server extends Claude's capabilities with blockchain tools:
 
 // Claude Desktop Configuration
 {
   "mcpServers": {
-    "agentipy": {
+    "FastlanePy": {
       "command": "./run_mcp.sh",
       "autoApprove": ["GET_BALANCE", "PRICE_PREDICTION"]
     }
@@ -574,10 +575,10 @@ Keep private keys secure
 Use environment variables for sensitive data
 Test on devnet/testnet before mainnet
 🤝 Community Engagement and Contribution
-AgentiPy encourages community contributions, with developers invited to fork the repository at github.com/niceberginc/agentipy/, submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
+FastlanePy encourages community contributions, with developers invited to fork the repository at github.com/fastlanepython/FastlanePy/, submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
 
 📜 Licensing and Contact Information
-AgentiPy is licensed under the MIT License, ensuring open access and flexibility for developers. For support, contact support@agentipy.com, follow updates on X at @AgentiPy, or join the community on Discord at Join our Discord Community.
+FastlanePy is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at @FastlanePy.
 
 👥 Contributors
 Become a contributor! Open an issue or submit a pull request to join us!
