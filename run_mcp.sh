@@ -13,7 +13,7 @@ else
     echo "Virtual environment not found. Please run the installation steps in the README."
     exit 1
 fi
-
+ 
 # Load environment variables from .env file
 if [ -f "$SCRIPT_DIR/.env" ]; then
     set -a
