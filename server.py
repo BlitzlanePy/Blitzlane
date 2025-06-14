@@ -1,6 +1,6 @@
 import os
-from fastlanepy import SolanaAgentKit
-from fastlanepy.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
+from blitzlane import SolanaAgentKit
+from blitzlane.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
 
 def main():
     agent = SolanaAgentKit(
