@@ -7,7 +7,7 @@
 #     $
 
 
-
+ 
 def main():
     lines = int(input("Enter no.of lines: "))
     pattern(lines)
