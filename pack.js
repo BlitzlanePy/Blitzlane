@@ -13,7 +13,7 @@ try {
     readFileSync(resolve(__dirname, 'package.json'), 'utf8')
   );
 
-  const outdir = resolve(__dirname, 'release');
+  const outdir = resolve(__dirname, 'release');c
   const filename = `${base}-v${version}.zip`;
   const zip = new AdmZip();
   zip.addLocalFolder(resolve(__dirname, 'dist'));
