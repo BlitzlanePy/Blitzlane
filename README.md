@@ -1,5 +1,5 @@
-# Blitzlane: Your AI Agent Toolkit for Blockchain Applications
-![image](https://github.com/user-attachments/assets/cfbb5cfc-2f61-4691-af50-338ba7ac1080)
+# Datalane: Your AI Agent Toolkit for Blockchain Applications
+![image][(https://github.com/user-attachments/assets/cfbb5cfc-2f61-4691-af50-338ba7ac1080)](https://pbs.twimg.com/profile_images/1953451791665823744/NAbEgwLG_400x400.jpg)
 
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
@@ -7,19 +7,19 @@
 
 	 
 
-# Blitzlane: Your AI Agent Toolkit for Blockchain Applications
+# Datalane: Your AI Agent Toolkit for Blockchain Applications
 
-Blitzlane is a Python toolkit designed to empower AI agents to interact seamlessly with blockchain applications, focusing on Solana and Base. It simplifies the development of decentralized applications (dApps) by providing tools for token management, NFT handling, and more. With a focus on ease of use and powerful functionality, Blitzlane allows developers to create robust and sophisticated blockchain-based solutions, leveraging AI-driven workflows.
+Datalane is a Python toolkit designed to empower AI agents to interact seamlessly with blockchain applications, focusing on Solana and Base. It simplifies the development of decentralized applications (dApps) by providing tools for token management, NFT handling, and more. With a focus on ease of use and powerful functionality, Datalane allows developers to create robust and sophisticated blockchain-based solutions, leveraging AI-driven workflows.
 
 
 
-[<img src="https://img.shields.io/github/stars/fastlanepython/FastlanePy?style=social" alt="GitHub Stars">](https://github.com/BlitzlanePy/Blitzlane)
-[<img src="https://img.shields.io/github/issues/fastlanepython/FastlanePy" alt="Open Issues">](https://github.com/BlitzlanePy/Blitzlane))
-[<img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python Version">](https://github.com/BlitzlanePy/Blitzlane)
-[<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">](https://github.com/BlitzlanePy/Blitzlane)
+[<img src="https://img.shields.io/github/stars/fastlanepython/FastlanePy?style=social" alt="GitHub Stars">](https://github.com/Py/Datalane)
+[<img src="https://img.shields.io/github/issues/fastlanepython/FastlanePy" alt="Open Issues">](https://github.com/DatalanePy/Datalane))
+[<img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python Version">](https://github.com/DatalanePy/Datalane)
+[<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">](https://github.com/DatalanePy/Datalane)
 ## 🚀 Introduction
 
-Blitzlane bridges the gap between AI agents and blockchain applications. It provides a streamlined development experience for building decentralized applications (dApps) that leverage the power of AI on Solana and Base. From automated trading to complex DeFi interactions, Blitzlane equips developers with the tools needed to build intelligent on-chain solutions.
+Datalane bridges the gap between AI agents and blockchain applications. It provides a streamlined development experience for building decentralized applications (dApps) that leverage the power of AI on Solana and Base. From automated trading to complex DeFi interactions, Datalane equips developers with the tools needed to build intelligent on-chain solutions.
 
 ## ✨ Key Features
 
@@ -30,7 +30,7 @@ Blitzlane bridges the gap between AI agents and blockchain applications. It prov
 *   **Extensible Design:** Allows developers to create custom protocols and actions.
 *   **Coingecko Integration**: Enhanced with new tooling to explore trending tokens, prices, and new pools
 *   **Streamlined Development:** Provides essential utility functions such as price fetching, balance checks, and transaction confirmation.
-*   **Model Context Protocol (MCP) Support:** Includes a built-in MCP server module and supports integration with dedicated MCP servers (like the Blitzlane-mcp for Claude Desktop) for standardized AI interaction.
+*   **Model Context Protocol (MCP) Support:** Includes a built-in MCP server module and supports integration with dedicated MCP servers (like the Datalane-mcp for Claude Desktop) for standardized AI interaction.
 
 ## 📦 Installation and Setup
 
@@ -42,7 +42,7 @@ Before you begin, ensure you have the following prerequisites:
 *   **Wallet with Private Keys:**  Crucial for signing and sending transactions.  **Securely manage your private keys!**
 *   **API Keys (Optional):** For accessing various blockchain networks or external data sources (e.g., CoinGecko, Allora, e.t.c.).
 
-Follow these steps to install and set up Blitzlane:
+Follow these steps to install and set up Datalane:
 
 1.  **Create a Virtual Environment (Recommended):**  Isolate your project dependencies.
     ```bash
@@ -57,23 +57,23 @@ Follow these steps to install and set up Blitzlane:
         ```bash
         venv\Scripts\activate
         ```
-3.  **Install Blitzlane:**
+3.  **Install Datalane:**
     ```bash
-    pip install Blitzlane
+    pip install Datalane
     ```
 4.  **Verify Installation:**
     ```python
-    import Blitzlane
-    print(Blitzlane.__version__)  # Example output: 2.0.2
+    import Datalane
+    print(Datalane.__version__)  # Example output: 2.0.2
     ```
 
 ## 🛠️ Supported Protocols and Tools
 
-Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+Datalane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
 
 ## 🛠️ Supported Protocols and Tools
 
-Blitzlane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
+Datalane supports a diverse set of protocols, each with specific actions. This table provides a quick reference:
 
 | Protocol       | Blockchain | Actions                                                        | GitHub Tool Link                                                                            |
 | :------------- | :--------- | :------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
@@ -107,8 +107,8 @@ Blitzlane supports a diverse set of protocols, each with specific actions. This 
 | ThreeLand    | Solana     | ThreeLand NFT mint and deploy        | [ThreeLand NFT mint tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_3land.py) |
 | Elfa AI       | Solana     | Get trending tokens, mentions, smart account stats              | [Elfa AI Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_elfa_ai.py) |
 | FluxBeam      | Solana     | Create a new pool                                               | [FluxBeam Tool](https://github.com/fastlanepython/FastlanePy/blob/main/FastlanePy/tools/use_fluxbeam.py) |
-| Blitzlane MCP          | Solana     | Extensible Solana toolset via a Model Context Protocol server       | [MCP tool](https://github.com/fastlanepython/FastlanePy/tree/main/FastlanePy/mcp)             |
-| Claude Desktop MCP    | Solana     | Claude‐compatible MCP server exposing onchain actions | [Blitzlane MCP Server for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp) |
+| Datalane MCP          | Solana     | Extensible Solana toolset via a Model Context Protocol server       | [MCP tool](https://github.com/fastlanepython/FastlanePy/tree/main/FastlanePy/mcp)             |
+| Claude Desktop MCP    | Solana     | Claude‐compatible MCP server exposing onchain actions | [Datalane MCP Server for Claude Desktop](https://github.com/fastlanepython/FastlanePy-mcp) |
 
 
 
@@ -122,8 +122,8 @@ Important Security Note: Never hardcode your private key directly into your code
 
 ## Transfer SOL/SPL: Easily send tokens.
 ```python
-from Blitzlane.agent import SolanaAgentKit
-from Blitzlane.tools.transfer import TokenTransferManager
+from Datalane.agent import SolanaAgentKit
+from Datalane.tools.transfer import TokenTransferManager
 import asyncio
 
 async def main():
@@ -163,10 +163,10 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 ```
-## Checking Sol Balance Using Blitzlane
+## Checking Sol Balance Using Datalane
 ```python
-from Blitzlane.agent import SolanaAgentKit
-from Blitzlane.tools.get_balance import BalanceFetcher
+from Datalane.agent import SolanaAgentKit
+from Datalane.tools.get_balance import BalanceFetcher
 import asyncio
 
 async def main():
@@ -596,7 +596,7 @@ from FastlanePy.mcp.all_actions import ALL_ACTIONS
 
 # Initialize server with Solana tools
 mcp = FastMCP(
-    "Blitzlane-mcp",
+    "Datalane-mcp",
     instructions="Solana tools: Get balance, transfer SOL, price prediction, etc.",
     dependencies=["pydantic", "httpx", "solana"],
 )
@@ -606,8 +606,8 @@ mcp = FastMCP(
 This server auto-registers all tools in `ALL_ACTIONS` and can be started via:
 
 ```python
-from Blitzlane.agent import SolanaAgentKit
-from Blitzlane.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
+from Datalane.agent import SolanaAgentKit
+from Datalane.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
 
 agent = SolanaAgentKit(private_key="<KEY>", rpc_url="<RPC_URL>")
 start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
@@ -615,20 +615,20 @@ start_mcp_server(agent)  # Exposes all Solana, Allora, and Jupiter actions
 
 ---
 
-## Blitzlane MCP Server for Claude Desktop
+## Datalane MCP Server for Claude Desktop
 
-A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Blitzlane and enables AI agents to perform blockchain operations seamlessly.
+A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI, allowing it to interact with the Solana blockchain through a standardized interface. This implementation uses Datazlane and enables AI agents to perform blockchain operations seamlessly.
 
 
 ###  Claude Desktop Integration
 
-**[Blitzlane MCP Server](https://github.com/fastlanepython/FastlanePy-mcp)** extends Claude's capabilities with blockchain tools:
+**[Datalane MCP Server](https://github.com/fastlanepython/FastlanePy-mcp)** extends Claude's capabilities with blockchain tools:
 
 ```json
 // Claude Desktop Configuration
 {
   "mcpServers": {
-    "FBlitzlane": {
+    "Datalane": {
       "command": "./run_mcp.sh",
       "autoApprove": ["GET_BALANCE", "PRICE_PREDICTION"]
     }
@@ -653,10 +653,10 @@ A Model Context Protocol (MCP) server that provides on-chain tools for Claude AI
 
 
 ### 🤝  Community Engagement and Contribution
-Blitzlane encourages community contributions, with developers invited to fork the repository at [github.com/BlitzlanePy/Blitzlane/](https://github.com/BlitzlanePy/Blitzlane/), submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
+Datalane encourages community contributions, with developers invited to fork the repository at [github.com/DatalanePy/Dataane/](https://github.com/DatalanePy/Datalane/), submit pull requests, and report issues via GitHub Issues. This collaborative approach fosters continuous improvement and innovation within the ecosystem.
 
 #### 📜 Licensing and Contact Information
-Blitzlane is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at [@Blitzlane](https://x.com/Blitzlane).
+Datalane is licensed under the MIT License, ensuring open access and flexibility for developers. Follow updates on X at [@Datalane](https://x.com/DatalanePy).
 
 
 
