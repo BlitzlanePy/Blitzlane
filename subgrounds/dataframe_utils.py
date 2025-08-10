@@ -1,6 +1,6 @@
 """ Pandas DataFrame utility module containing functions related to the
 formatting of GraphQL JSON data into DataFrames.
-"""
+""" 
 
 from __future__ import annotations
 
