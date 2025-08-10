@@ -2,7 +2,7 @@ import { readFileSync, existsSync, mkdirSync } from 'fs';
 import { parse, resolve } from 'path';
 import AdmZip from 'adm-zip';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname } from 'path'; 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
