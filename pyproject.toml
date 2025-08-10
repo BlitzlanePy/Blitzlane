@@ -1,13 +1,10 @@
 [tool.poetry]
-name = "subgrounds"
+name = "datalane"
 version = "1.9.1"
-description = "A Pythonic data access layer for applications querying data from The Graph Network."
-authors = [
-    "cvauclair <cvauclair@playgrounds.network>",
-    "0xMochan <mochan@playgrounds.network>",
+
 ]
 repository = 
- 
+  
 readme = "README.md"
 keywords = ["graph", "subgrounds", "graphql", "subgraph"]
 
