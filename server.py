@@ -1,11 +1,11 @@
 import os
-from blitzlane import SolanaAgentKit
-from blitzlane.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
+from datalane import SolanaAgentKit
+from datalane.mcp.mcp_server import start_mcp_server, ALL_ACTIONS
 
 def main():
     agent = SolanaAgentKit(
         private_key=os.getenv("SOLANA_PRIVATE_KEY"),
-        rpc_url=os.getenv("RPC_URL"),
+        rpc_url=os.getenv("RPC_URL"), 
     )
 
     # Use all available actions or specify a subset
