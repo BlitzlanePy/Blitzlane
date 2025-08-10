@@ -1,6 +1,6 @@
 @echo off
 setlocal
-
+ 
 REM Get the directory where the script is located
 set "SCRIPT_DIR=%~dp0"
 
