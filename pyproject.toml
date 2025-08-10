@@ -6,7 +6,7 @@ authors = [
     "cvauclair <cvauclair@playgrounds.network>",
     "0xMochan <mochan@playgrounds.network>",
 ]
-repository = "https://github.com/0xPlaygrounds/subgrounds"
+repository = 
  
 readme = "README.md"
 keywords = ["graph", "subgrounds", "graphql", "subgraph"]
