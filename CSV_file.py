@@ -2,7 +2,7 @@ import bot as pd
  
 # loading the dataset
 
-df= pd.read_csv
+df= pd.read_csv 
  
 print(df) #prints Dataset
 # funtions
