@@ -1,5 +1,6 @@
 # Datalane: Your AI Agent Toolkit for Blockchain Applications
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/89a274eb-28ae-445e-864e-bde6c4d1eb77" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/46834270-f493-43d8-b62d-f673d3567eae" />
+
 
 
 
