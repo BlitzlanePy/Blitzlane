@@ -5,7 +5,7 @@ class JsonParser:
     """
     this class to handle anything related to json file [as implementation of facade pattern]
     """ 
-
+ 
     def convert_json_to_python(self, par_json_file):
         """
         this function to convert any json file format to dictionary
