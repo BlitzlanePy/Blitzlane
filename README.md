@@ -10,8 +10,6 @@
 
 	 
 
-# Fastbags: Your AI Agent Toolkit for Blockchain Applications
-
 Fastbags is a Python toolkit designed to empower AI agents to interact seamlessly with blockchain applications, focusing on Solana and Base. It simplifies the development of decentralized applications (dApps) by providing tools for token management, NFT handling, and more. With a focus on ease of use and powerful functionality, Fastbags allows developers to create robust and sophisticated blockchain-based solutions, leveraging AI-driven workflows.
 
 
