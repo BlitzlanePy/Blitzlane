@@ -1,7 +1,7 @@
 name: Pylint - Datalane
 
 on: [push]
-
+ 
 jobs: 
   build:
     runs-on: ubuntu-latest
